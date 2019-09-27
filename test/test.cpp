@@ -32,8 +32,8 @@ TEST(PidControllerTest, testConstructor) {
  * Test compute method
  */
 TEST(PidControllerTest, testCompute) {
-  PidController testPid(1, 2, 3);
-  EXPECT_NEAR(60.0, testPid.compute(10, 20), 1.0);
+  PidController testPid(1, 2, 3); 
+  EXPECT_NEAR(60.0, testPid.compute(20, 10), 1.0);
 }
 
 /**
@@ -44,8 +44,8 @@ TEST(PidControllerTest, testTune) {
   testPid.tuneKp(1.9);
   testPid.tuneKi(1.8);
   testPid.tuneKd(1.7);
-  EXPECT_EQ(1.9, testPid.getKp());
-  EXPECT_EQ(1.8, testPid.getKi());
-  EXPECT_EQ(1.7, testPid.getKd());
+  EXPECT_EQ(testPid.getKp(), 1.9);
+  EXPECT_EQ(testPid.getKi(), 1.8);
+  EXPECT_EQ(testPid.getKd(), 1.7);
 }
 
