@@ -15,9 +15,7 @@ Part 2
 
 
 ## Overview
-```
 Team Driven Development Project to create a PID Controller, with a focus on the compute() function for google testing.
-```
 
 ## Notes:
 Current unit tests check the functionality of the proportional control, further tests can be written in order to check all functionalities of the PID controller.
