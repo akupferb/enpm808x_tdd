@@ -9,7 +9,6 @@ PidController::PidController() {
   PidController::kd = 0;
   PidController::previousError = 0;
   PidController::integralError = 0;
-
 }
 
 PidController::PidController(const double &kp, const double &ki,
@@ -19,7 +18,6 @@ PidController::PidController(const double &kp, const double &ki,
   PidController::ki = ki;
   PidController::integralError = 0;
   PidController::previousError = 0;
-
 }
 
 double PidController::compute(const double &actualVelocity,
@@ -39,7 +37,6 @@ double PidController::compute(const double &actualVelocity,
 
 void PidController::tuneKp(const double &kp) {
   PidController::kp = kp;
-
 }
 
 void PidController::tuneKi(const double &ki) {
@@ -56,7 +53,6 @@ double PidController::getKp() {
 
 double PidController::getKi() {
   return ki;
-
 }
 
 double PidController::getKd() {

@@ -32,7 +32,7 @@ TEST(PidControllerTest, testConstructor) {
  * Test compute method
  */
 TEST(PidControllerTest, testCompute) {
-  PidController testPid(1, 2, 3); 
+  PidController testPid(1, 2, 3);
   EXPECT_NEAR(60.0, testPid.compute(20, 10), 1.0);
 }
 
