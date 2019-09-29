@@ -39,43 +39,49 @@ class PidController {
    * @param actualVelocity - The current actual velocity
    * @param desiredVelocity - The goal velocity
    * @param previousError - The previous amount of error used for integral
-   * return controlValue - The controller overall gain
+   * @return controlValue - The controller overall gain
    */
   double compute(const double &actualVelocity, const double &desiredVelocity);
 
   /**
    * @brief Tune proportional gain.
    * @param kp - proportional gain
+   * @return None
    */
   void tuneKp(const double &kp);
 
   /**
    * @brief Tune integral gain.
    * @param ki - integral gain
+   * @return None
    */
   void tuneKi(const double &ki);
 
   /**
    * @brief Tune derivative gain.
    * @param kd - derivative gain
+   * @return None
    */
   void tuneKd(const double &kd);
 
   /**
    * @brief Get current proportional gain.
-   * @return kp - proportional gain.
+   * @param None
+   * @return kp - proportional gain
    */
   double getKp();
 
   /**
    * @brief Get current integral gain.
-   * @return ki - integral gain.
+   * @param None
+   * @return ki - integral gain
    */
   double getKi();
 
   /**
    * @brief Get current derivative gain.
-   * @return kd - derivative gain.
+   * @param None
+   * @return kd - derivative gain
    */
   double getKd();
 };
